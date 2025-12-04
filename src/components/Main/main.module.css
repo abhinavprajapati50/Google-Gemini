@@ -45,6 +45,7 @@
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 15px;
     padding: 20px;
+    margin-bottom: 50px;
 }
 
 .main .card {
@@ -53,6 +54,7 @@
     background-color: #f0f4f9;
     border-radius: 10px;
     position: relative;
+    /* max-height: fit-content; */
     cursor: pointer;
 }
 
@@ -73,4 +75,51 @@
 
 .main .card:hover {
     background-color: #dfe4ea;
+}
+
+.main_bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+
+}
+
+.search_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search_box img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.search_box input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.search_box div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .bottom_info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
 }

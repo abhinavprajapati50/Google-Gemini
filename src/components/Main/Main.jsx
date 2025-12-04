@@ -55,6 +55,19 @@ const Main = () => {
 
                     </div>
                 </div>
+                <div className={style.main_bottom}>
+                    <div className={style.search_box}>
+                        <input type="text " placeholder='Enter a Prompt Here' />
+                        <div>
+                            <img src={assets.gallery_icon} alt="" />
+                            <img src={assets.mic_icon} alt="" />
+                            <img src={assets.send_icon} alt="" />
+                        </div>
+                    </div>
+                    <p className={style.bottom_info}>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ipsa quia ullam reiciendis asperiores, dignissimos iure. Voluptatibus reprehenderit quos consequuntur neque, atque similique suscipit temporibus, quod earum corporis ipsam quam?
+                    </p>
+                </div>
             </div>
         </div>
     )
