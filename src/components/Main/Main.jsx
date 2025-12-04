@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import style from './main.module.css';
 import { assets } from '../../assets/assets';
+import { Context } from '../../context/Context';
 
 const Main = () => {
+    const {
+        onSent,
+        recentPrompt,
+        showResult,
+        loading,
+        prevPrompt,
+        setPrevPrompt,
+        setRecentPrompt,
+        resultData,
+        input,
+        setInput,
+    } = useContext(Context)
+
+    const handleInput = (e) => {
+        setInput(e.target.value);
+        console.log(input);
+
+    }
     return (
         <div className={style.main}>
             <div className={style.nav}>
@@ -57,11 +76,11 @@ const Main = () => {
                 </div>
                 <div className={style.main_bottom}>
                     <div className={style.search_box}>
-                        <input type="text " placeholder='Enter a Prompt Here' />
+                        <input type="text" value={input} onChange={handleInput} placeholder='Enter a Prompt Here' />
                         <div>
                             <img src={assets.gallery_icon} alt="" />
                             <img src={assets.mic_icon} alt="" />
-                            <img src={assets.send_icon} alt="" />
+                            <img onClick={() => onSent()} src={assets.send_icon} alt="" />
                         </div>
                     </div>
                     <p className={style.bottom_info}>
